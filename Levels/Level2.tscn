@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://42imrpp6pjan" path="res://assets/tempAssets/temp_glitch_death.png" id="4_506po"]
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="4_w0h0a"]
 [ext_resource type="Script" uid="uid://c44yefyhbkvt7" path="res://Levels/Level2Scripts/glitch_effect.gd" id="5_v115i"]
+[ext_resource type="PackedScene" uid="uid://by8sclj042wa3" path="res://Goal/goal.tscn" id="6_jglcl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3ha0"]
 texture = ExtResource("3_jglcl")
@@ -67,3 +68,7 @@ tile_set = SubResource("TileSet_jglcl")
 [node name="GlitchEffect" type="Node2D" parent="." unique_id=1503883087]
 script = ExtResource("5_v115i")
 target_fps = 5
+
+[node name="Area2D" parent="." unique_id=255270968 instance=ExtResource("6_jglcl")]
+position = Vector2(319, 567)
+current_level = 2

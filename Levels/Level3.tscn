@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cdku2mbc5td7h" path="res://Levels/Level3Scripts/not_responding_effect.gd" id="4_8eiv4"]
 [ext_resource type="Texture2D" uid="uid://cbfcyvunq4668" path="res://assets/loading.png" id="5_yd8fq"]
 [ext_resource type="Script" uid="uid://j4bxg6k0woal" path="res://Levels/Level3Scripts/sprite_2dRoatting.gd" id="6_vybwq"]
+[ext_resource type="PackedScene" uid="uid://by8sclj042wa3" path="res://Goal/goal.tscn" id="7_4cgce"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8eiv4"]
 texture = ExtResource("3_jon3f")
@@ -68,3 +69,7 @@ position = Vector2(640, 360)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_yd8fq")
 script = ExtResource("6_vybwq")
+
+[node name="Area2D" parent="." unique_id=255270968 instance=ExtResource("7_4cgce")]
+position = Vector2(176, 622)
+current_level = 3
