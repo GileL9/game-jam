@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://8y8uvrq6uyqw"]
 
 [ext_resource type="Script" uid="uid://nfxfcmein2gh" path="res://Levels/Level7Scripts/level_7.gd" id="1_isoma"]
-[ext_resource type="Texture2D" uid="uid://dwwhjut5k36os" path="res://assets/tempAssets/StartingBackground.png" id="2_gxfhd"]
+[ext_resource type="Texture2D" uid="uid://cgydev7cl46ny" path="res://assets/idebckgnd-backgrnd.png" id="2_isoma"]
 [ext_resource type="Texture2D" uid="uid://dv2q5vx32tyx5" path="res://assets/tempAssets/tempTileset.png" id="3_4km2w"]
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="4_58uy7"]
 
@@ -23,7 +23,7 @@ sources/0 = SubResource("TileSetAtlasSource_k78pi")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jghee"]
 size = Vector2(3265, 27)
 
-[node name="Level6" type="Node2D" unique_id=1554156355]
+[node name="Level7" type="Node2D" unique_id=1554156355]
 script = ExtResource("1_isoma")
 
 [node name="UI" type="Control" parent="." unique_id=828387078]
@@ -38,9 +38,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 25.0
+offset_right = 82.04346
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_gxfhd")
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("2_isoma")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1468063784]
 texture_filter = 1
