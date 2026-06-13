@@ -7,8 +7,8 @@ extends Node2D
 var already_spawned = []  # tracks used spawn point nodes
 
 func _process(delta: float) -> void:
-	label.text = str(already_spawned.size()) + "/7 Allowed Windows"
-	if already_spawned.size() > 7:
+	label.text = str(already_spawned.size()) + "/6 Allowed Windows"
+	if already_spawned.size() > 6:
 		reset_level()
 		#reset level (create a function for that sets the player pos to (359.0,67)
 	pass

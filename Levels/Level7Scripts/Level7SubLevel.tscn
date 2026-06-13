@@ -1,0 +1,213 @@
+[gd_scene format=4 uid="uid://b3pt3ryoun2mc"]
+
+[ext_resource type="Texture2D" uid="uid://6mhuy52loi7k" path="res://assets/desktopNew.png" id="1_lmo10"]
+[ext_resource type="Texture2D" uid="uid://dv2q5vx32tyx5" path="res://assets/tempAssets/tempTileset.png" id="2_c4hmc"]
+[ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="3_lreoj"]
+[ext_resource type="Texture2D" uid="uid://drw3ds7o5ypvm" path="res://assets/folder_icon.png" id="4_prlix"]
+[ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="5_y36pr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lreoj"]
+texture = ExtResource("2_c4hmc")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_prlix"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_lreoj")
+
+[node name="Level6SubLevel" type="Node2D" unique_id=103300658]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=276926154]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_lmo10")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1321839375]
+texture_filter = 1
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAABQAAAAAAAAAAAABABQAAAAAAAAAAAACABQAAAAAAAAAAAADABQAAAAAAAAAAAAEABQAAAAAAAAAAAAFABQAAAAAAAAAAAAGABQAAAAAAAAAAAAHABQAAAAAAAAAAAAIABQAAAAAAAAAAAAJABQAAAAAAAAAAAAKABQAAAAAAAAAAAALABQAAAAAAAAAAAAMABQAAAAAAAAAAAANABQAAAAAAAAAAAAOABQAAAAAAAAAAAAPABQAAAAAAAAAAAAQABQAAAAAAAAAAAARABQAAAAAAAAAAAASABQAAAAAAAAAAAATABQAAAAAAAAAAAAUABQAAAAAAAAAAAAVABQAAAAAAAAAAAAWABQAAAAAAAAAAAAXABQAAAAAAAAAAAAYABQAAAAAAAAAAAAZABQAAAAAAAAAAAAaABQAAAAAAAAAAAAbABQAAAAAAAAAAAAcABQAAAAAAAAAAAAdABQAAAAAAAAAAAAeABQAAAAAAAAAAAAfABQAAAAAAAAAAAAgABQAAAAAAAAAAAAhABQAAAAAAAAAAAAiABQAAAAAAAAAAAAjABQAAAAAAAAAAAAkABQAAAAAAAAAAAAlABQAAAAAAAAAAAAmABQAAAAAAAAAAAAnABQAAAAAAAAAAAAAABMAAAAAAAAAAAAAABIAAAAAAAAAAAAAABEAAAAAAAAAAAAnABMAAAAAAAAAAAAnABIAAAAAAAAAAAAnABEAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_prlix")
+
+[node name="start" type="Label" parent="." unique_id=485171396]
+offset_left = 29.0
+offset_top = 678.0
+offset_right = 86.0
+offset_bottom = 709.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="start2" type="Label" parent="." unique_id=208168421]
+offset_left = 91.0
+offset_top = 45.0
+offset_right = 374.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "Wholle Lotta Bugs.exe"
+
+[node name="win_exp" type="Label" parent="." unique_id=143597654]
+offset_left = 181.0
+offset_top = 678.0
+offset_right = 281.0
+offset_bottom = 709.0
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "Explorer"
+
+[node name="time" type="Label" parent="." unique_id=882419803]
+offset_left = 1182.0
+offset_top = 681.0
+offset_right = 1282.0
+offset_bottom = 712.0
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 24
+text = "11:52 AM"
+
+[node name="Level1" type="TextureButton" parent="." unique_id=2002925152]
+offset_left = 129.0
+offset_top = 177.00002
+offset_right = 372.0
+offset_bottom = 346.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("4_prlix")
+texture_hover = ExtResource("4_prlix")
+texture_disabled = ExtResource("4_prlix")
+texture_focused = ExtResource("4_prlix")
+
+[node name="Label" type="Label" parent="Level1" unique_id=1372657639]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 164.0
+offset_right = 274.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "GameJam.exe Not Found"
+
+[node name="Level2" type="TextureButton" parent="." unique_id=1033915339]
+offset_left = 429.0
+offset_top = 177.0
+offset_right = 672.0
+offset_bottom = 346.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("4_prlix")
+texture_hover = ExtResource("4_prlix")
+texture_disabled = ExtResource("4_prlix")
+texture_focused = ExtResource("4_prlix")
+
+[node name="Label" type="Label" parent="Level2" unique_id=1121618488]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 164.0
+offset_right = 250.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "Drive is Full"
+
+[node name="Level3" type="TextureButton" parent="." unique_id=170360955]
+offset_left = 729.0
+offset_top = 177.0
+offset_right = 972.0
+offset_bottom = 346.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("4_prlix")
+texture_hover = ExtResource("4_prlix")
+texture_disabled = ExtResource("4_prlix")
+texture_focused = ExtResource("4_prlix")
+
+[node name="Label" type="Label" parent="Level3" unique_id=1358319691]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 164.0
+offset_right = 228.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "Not Responding"
+
+[node name="Level4" type="TextureButton" parent="." unique_id=523981166]
+offset_left = 1029.0
+offset_top = 177.0
+offset_right = 1272.0
+offset_bottom = 346.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("4_prlix")
+texture_hover = ExtResource("4_prlix")
+texture_disabled = ExtResource("4_prlix")
+texture_focused = ExtResource("4_prlix")
+
+[node name="Label" type="Label" parent="Level4" unique_id=542914973]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 164.0
+offset_right = 228.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "Windows.exe
+stopped working"
+horizontal_alignment = 1
+
+[node name="Level5" type="TextureButton" parent="." unique_id=590324332]
+offset_left = 129.0
+offset_top = 389.0
+offset_right = 372.0
+offset_bottom = 558.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("4_prlix")
+texture_hover = ExtResource("4_prlix")
+texture_disabled = ExtResource("4_prlix")
+texture_focused = ExtResource("4_prlix")
+
+[node name="Label" type="Label" parent="Level5" unique_id=1778821027]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 164.0
+offset_right = 274.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "Entity Overflow "
+horizontal_alignment = 1
+
+[node name="Level6" type="TextureButton" parent="." unique_id=1630563416]
+offset_left = 429.0
+offset_top = 389.0
+offset_right = 672.0
+offset_bottom = 558.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("4_prlix")
+texture_hover = ExtResource("4_prlix")
+texture_disabled = ExtResource("4_prlix")
+texture_focused = ExtResource("4_prlix")
+
+[node name="Label" type="Label" parent="Level6" unique_id=1597470719]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 164.0
+offset_right = 274.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_lreoj")
+theme_override_font_sizes/font_size = 32
+text = "Level 6"
+horizontal_alignment = 1
+
+[node name="Player" parent="." unique_id=1382806413 instance=ExtResource("5_y36pr")]
+position = Vector2(581, -113)
+scale = Vector2(2, 2)
