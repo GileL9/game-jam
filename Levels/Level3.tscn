@@ -70,6 +70,6 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_yd8fq")
 script = ExtResource("6_vybwq")
 
-[node name="Area2D" parent="." unique_id=255270968 instance=ExtResource("7_4cgce")]
-position = Vector2(176, 622)
+[node name="goal" parent="." unique_id=255270968 instance=ExtResource("7_4cgce")]
+position = Vector2(1139, 113)
 current_level = 3

@@ -34,6 +34,21 @@ anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=1285270700]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 25.0
+offset_right = 715.0
+offset_bottom = 684.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("2_31wo2")
+
 [node name="Label" type="Label" parent="UI" unique_id=1480491755]
 layout_mode = 1
 anchors_preset = 5
@@ -47,21 +62,6 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_uwj6k")
 theme_override_font_sizes/font_size = 64
 text = "current entity limit is 10..."
-
-[node name="TextureRect" type="TextureRect" parent="UI" unique_id=1285270700]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = 25.0
-offset_right = 82.04346
-offset_bottom = 25.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.92, 0.92)
-texture = ExtResource("2_31wo2")
 
 [node name="BoxSpawner" type="Node2D" parent="." unique_id=730412880]
 script = ExtResource("3_31wo2")

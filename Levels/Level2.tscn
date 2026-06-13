@@ -71,8 +71,9 @@ tile_set = SubResource("TileSet_jglcl")
 script = ExtResource("5_v115i")
 target_fps = 5
 
-[node name="Area2D" parent="." unique_id=255270968 instance=ExtResource("6_jglcl")]
-position = Vector2(319, 567)
+[node name="goal" parent="." unique_id=255270968 instance=ExtResource("6_jglcl")]
+position = Vector2(1187, 109)
+current_level = 2
 
 [node name="Platform" parent="." unique_id=774370483 instance=ExtResource("7_m3ha0")]
 position = Vector2(201, 351)
