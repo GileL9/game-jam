@@ -1,0 +1,121 @@
+[gd_scene format=4 uid="uid://cnwgjp1e6es15"]
+
+[ext_resource type="Texture2D" uid="uid://cqu8icw3d004u" path="res://assets/win_wallpaper.png" id="1_rkafn"]
+[ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="2_2qv2g"]
+[ext_resource type="Texture2D" uid="uid://dv2q5vx32tyx5" path="res://assets/tempAssets/tempTileset.png" id="3_0sogr"]
+[ext_resource type="Script" uid="uid://dm0nismykam0a" path="res://Levels/Level1Scripts/platform_spawner.gd" id="4_5brs8"]
+[ext_resource type="PackedScene" uid="uid://by8sclj042wa3" path="res://Goal/goal.tscn" id="5_qgpl5"]
+[ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="5_vgbee"]
+[ext_resource type="PackedScene" uid="uid://vo6eqhh20v7" path="res://File/File.tscn" id="6_vgbee"]
+[ext_resource type="Script" uid="uid://cdku2mbc5td7h" path="res://Levels/Level3Scripts/not_responding_effect.gd" id="8_v72e1"]
+[ext_resource type="Texture2D" uid="uid://cbfcyvunq4668" path="res://assets/loading.png" id="9_so18s"]
+[ext_resource type="Script" uid="uid://j4bxg6k0woal" path="res://Levels/Level3Scripts/sprite_2dRoatting.gd" id="10_hg5yk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5brs8"]
+texture = ExtResource("3_0sogr")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_qgpl5"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5brs8")
+
+[node name="Level4" type="Node2D" unique_id=1246537069]
+
+[node name="UI" type="Control" parent="." unique_id=715004518]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=32969519]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rkafn")
+
+[node name="Label" type="Label" parent="UI" unique_id=2038279189]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 67.0
+offset_right = 20.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_2qv2g")
+theme_override_font_sizes/font_size = 64
+text = "0/3 Allowed Windows"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1706004029]
+texture_filter = 1
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAABUAAAAAAAAAAAABABUAAAAAAAAAAAACABUAAAAAAAAAAAADABUAAAAAAAAAAAAEABUAAAAAAAAAAAAJABUAAAAAAAAAAAAKABUAAAAAAAAAAAALABUAAAAAAAAAAAAMABUAAAAAAAAAAAANABUAAAAAAAAAAAAOABUAAAAAAAAAAAAPABUAAAAAAAAAAAAQABUAAAAAAAAAAAARABUAAAAAAAAAAAASABUAAAAAAAAAAAATABUAAAAAAAAAAAAUABUAAAAAAAAAAAAVABUAAAAAAAAAAAAWABUAAAAAAAAAAAAXABUAAAAAAAAAAAAYABUAAAAAAAAAAAAZABUAAAAAAAAAAAAaABUAAAAAAAAAAAAbABUAAAAAAAAAAAAcABUAAAAAAAAAAAAdABUAAAAAAAAAAAAeABUAAAAAAAAAAAAfABUAAAAAAAAAAAAgABUAAAAAAAAAAAAhABUAAAAAAAAAAAAiABUAAAAAAAAAAAAjABUAAAAAAAAAAAAkABUAAAAAAAAAAAAlABUAAAAAAAAAAAAmABUAAAAAAAAAAAAnABUAAAAAAAAAAAAnABQAAAAAAAAAAAAnABMAAAAAAAAAAAAnABIAAAAAAAAAAAAnABEAAAAAAAAAAAAnABAAAAAAAAAAAAAnAA8AAAAAAAAAAAAnAA4AAAAAAAAAAAAnAA0AAAAAAAAAAAAnAAwAAAAAAAAAAAAnAAsAAAAAAAAAAAAnAAoAAAAAAAAAAAAnAAkAAAAAAAAAAAAnAAgAAAAAAAAAAAAnAAcAAAAAAAAAAAAnAAYAAAAAAAAAAAAnAAUAAAAAAAAAAAAnAAQAAAAAAAAAAAAnAAMAAAAAAAAAAAAnAAIAAAAAAAAAAAAnAAEAAAAAAAAAAAAnAAAAAAAAAAAAAAAmAAAAAAAAAAAAAAAlAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAjAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAfAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAdAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAbAAAAAAAAAAAAAAAaAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAXAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAATAAAAAAAAAAAAAAASAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA8AAAAAAAAAAAAAABAAAAAAAAAAAAAAABEAAAAAAAAAAAAAABIAAAAAAAAAAAAAABMAAAAAAAAAAAAAABQAAAAAAAAAAAABAAUAAAABAAAAAAACAAUAAAABAAAAAAADAAUAAAABAAAAAAAEAAUAAAABAAAAAAAFAAUAAAABAAAAAAAGAAUAAAABAAAAAAAFABUAAAAAAAAAAAAGABUAAAAAAAAAAAAHABUAAAAAAAAAAAAIABUAAAAAAAAAAAAQABQAAAACAAAAAAAPABQAAAACAAAAAAAOABQAAAACAAAAAAARABQAAAACAAAAAAASABQAAAACAAAAAAATABQAAAACAAAAAAAUABQAAAACAAAAAAAVABQAAAACAAAAAAAhAAQAAAABAAAAAAAiAAQAAAABAAAAAAAjAAQAAAABAAAAAAAkAAQAAAABAAAAAAAlAAQAAAABAAAAAAAmAAQAAAABAAAAAAAhAA0AAAABAAAAAAAiAA0AAAABAAAAAAAjAA0AAAABAAAAAAAkAA0AAAABAAAAAAAlAA0AAAABAAAAAAAmAA0AAAABAAAAAAA=")
+tile_set = SubResource("TileSet_qgpl5")
+
+[node name="Platform Spawner" type="Node2D" parent="." unique_id=1784207443]
+script = ExtResource("4_5brs8")
+
+[node name="Timer" type="Timer" parent="Platform Spawner" unique_id=229763732]
+wait_time = 1.5
+autostart = true
+
+[node name="Markers" type="Node2D" parent="Platform Spawner" unique_id=767354190]
+
+[node name="SpawnLoc" type="Marker2D" parent="Platform Spawner/Markers" unique_id=784896222]
+position = Vector2(847, 556)
+
+[node name="SpawnLoc2" type="Marker2D" parent="Platform Spawner/Markers" unique_id=205726829]
+position = Vector2(376, 214)
+
+[node name="SpawnLoc3" type="Marker2D" parent="Platform Spawner/Markers" unique_id=152845390]
+position = Vector2(847, 329)
+
+[node name="Goal" parent="." unique_id=255270968 instance=ExtResource("5_qgpl5")]
+position = Vector2(92, 109)
+
+[node name="File" parent="." unique_id=1116898668 instance=ExtResource("6_vgbee")]
+position = Vector2(590, 539)
+
+[node name="File2" parent="." unique_id=83469643 instance=ExtResource("6_vgbee")]
+position = Vector2(1148, 353)
+
+[node name="File3" parent="." unique_id=872904600 instance=ExtResource("6_vgbee")]
+position = Vector2(1149, 88)
+
+[node name="Player" parent="." unique_id=1382806413 instance=ExtResource("5_vgbee")]
+position = Vector2(68, 624)
+scale = Vector2(2, 2)
+
+[node name="NotRespondingEffect" type="CanvasLayer" parent="." unique_id=1223896367]
+layer = 100
+script = ExtResource("8_v72e1")
+FREEZE_SECONDS = 1.0
+
+[node name="Overlay" type="ColorRect" parent="NotRespondingEffect" unique_id=1759392685]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="NotRespondingEffect/Overlay" unique_id=2073781595]
+texture_filter = 1
+position = Vector2(640, 360)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("9_so18s")
+script = ExtResource("10_hg5yk")
+
+[connection signal="timeout" from="Platform Spawner/Timer" to="Platform Spawner" method="_on_timer_timeout"]
