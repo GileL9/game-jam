@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://bxgtryvoh8bfb"]
+
+[ext_resource type="Script" uid="uid://cka6fc3ee38tb" path="res://UI/LevelSelect/level_select.gd" id="1_8itbj"]
+[ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="1_pigic"]
+[ext_resource type="Texture2D" uid="uid://6mhuy52loi7k" path="res://assets/desktopNew.png" id="2_fvgb5"]
+[ext_resource type="Texture2D" uid="uid://drw3ds7o5ypvm" path="res://assets/folder_icon.png" id="3_tshe4"]
+
+[node name="LevelSelect" type="Control" unique_id=171922089]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8itbj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=46257882]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fvgb5")
+
+[node name="Level1" type="TextureButton" parent="." unique_id=1261457536]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 177.00002
+offset_right = 372.0
+offset_bottom = 346.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_tshe4")
+texture_hover = ExtResource("3_tshe4")
+texture_disabled = ExtResource("3_tshe4")
+texture_focused = ExtResource("3_tshe4")
+
+[node name="Label" type="Label" parent="Level1" unique_id=788669705]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 164.0
+offset_right = 274.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "GameJam.exe Not Found"
+
+[node name="Level2" type="TextureButton" parent="." unique_id=1393942721]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 177.0
+offset_right = 672.0
+offset_bottom = 346.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_tshe4")
+texture_hover = ExtResource("3_tshe4")
+texture_disabled = ExtResource("3_tshe4")
+texture_focused = ExtResource("3_tshe4")
+
+[node name="Label" type="Label" parent="Level2" unique_id=628592732]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 164.0
+offset_right = 250.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Drive is Full"
+
+[node name="Level3" type="TextureButton" parent="." unique_id=186290995]
+layout_mode = 0
+offset_left = 729.0
+offset_top = 177.0
+offset_right = 972.0
+offset_bottom = 346.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_tshe4")
+texture_hover = ExtResource("3_tshe4")
+texture_disabled = ExtResource("3_tshe4")
+texture_focused = ExtResource("3_tshe4")
+
+[node name="Label" type="Label" parent="Level3" unique_id=1902035514]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 164.0
+offset_right = 228.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Not Responding"
+
+[node name="Level4" type="TextureButton" parent="." unique_id=1077474883]
+layout_mode = 0
+offset_left = 1029.0
+offset_top = 177.0
+offset_right = 1272.0
+offset_bottom = 346.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_tshe4")
+texture_hover = ExtResource("3_tshe4")
+texture_disabled = ExtResource("3_tshe4")
+texture_focused = ExtResource("3_tshe4")
+
+[node name="Label" type="Label" parent="Level4" unique_id=316757285]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 164.0
+offset_right = 228.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Windows.exe
+stopped working"
+horizontal_alignment = 1
+
+[node name="Level5" type="TextureButton" parent="." unique_id=687621968]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 389.0
+offset_right = 372.0
+offset_bottom = 558.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("3_tshe4")
+texture_hover = ExtResource("3_tshe4")
+texture_disabled = ExtResource("3_tshe4")
+texture_focused = ExtResource("3_tshe4")
+
+[node name="Label" type="Label" parent="Level5" unique_id=557722028]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 164.0
+offset_right = 274.0
+offset_bottom = 195.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Entity Overflow "
+horizontal_alignment = 1
+
+[node name="start" type="Label" parent="." unique_id=398947510]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 678.0
+offset_right = 86.0
+offset_bottom = 709.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="start2" type="Label" parent="." unique_id=1228542581]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 45.0
+offset_right = 374.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Wholle Lotta Bugs.exe"
+
+[node name="win_exp" type="Label" parent="." unique_id=239488843]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 678.0
+offset_right = 281.0
+offset_bottom = 709.0
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Explorer"
+
+[node name="time" type="Label" parent="." unique_id=320852234]
+layout_mode = 0
+offset_left = 1182.0
+offset_top = 681.0
+offset_right = 1282.0
+offset_bottom = 712.0
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 24
+text = "11:52 AM"
+
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]

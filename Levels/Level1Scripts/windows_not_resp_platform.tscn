@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://e002q12wr7at"]
+
+[ext_resource type="Script" uid="uid://rnodulaei0rm" path="res://Levels/Level1Scripts/windows_not_resp_platform.gd" id="1_ahyh0"]
+[ext_resource type="Texture2D" uid="uid://dtjiw1vqrk71f" path="res://assets/FinalNotResp.png" id="2_ahyh0"]
+[ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="2_f20g4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ge0o"]
+size = Vector2(256, 128)
+
+[node name="WindowsGhostPlatform" type="StaticBody2D" unique_id=870517155]
+input_pickable = true
+script = ExtResource("1_ahyh0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=104270450]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ahyh0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=176295145]
+shape = SubResource("RectangleShape2D_6ge0o")
+
+[node name="Close" type="Button" parent="." unique_id=1451310774]
+offset_left = -40.0
+offset_top = 32.0
+offset_right = 39.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("2_f20g4")
+text = "Close"
+
+[node name="Label" type="Label" parent="." unique_id=1027741375]
+offset_left = -52.0
+offset_top = -10.0
+offset_right = 98.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("2_f20g4")
+text = "GameJam.exe not found"
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

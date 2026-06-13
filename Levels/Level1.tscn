@@ -1,0 +1,108 @@
+[gd_scene format=4 uid="uid://foivc34e70um"]
+
+[ext_resource type="Texture2D" uid="uid://cqu8icw3d004u" path="res://assets/win_wallpaper.png" id="1_nutv8"]
+[ext_resource type="Texture2D" uid="uid://dv2q5vx32tyx5" path="res://assets/tempAssets/tempTileset.png" id="1_w77jt"]
+[ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="2_nutv8"]
+[ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="3_fhqol"]
+[ext_resource type="Script" uid="uid://dm0nismykam0a" path="res://Levels/Level1Scripts/platform_spawner.gd" id="5_nutv8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nutv8"]
+texture = ExtResource("1_w77jt")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_fhqol"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_nutv8")
+
+[node name="Level1" type="Node2D" unique_id=1720741399]
+
+[node name="UI" type="Control" parent="." unique_id=382037764]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=535163337]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nutv8")
+
+[node name="Label" type="Label" parent="UI" unique_id=42338443]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 67.0
+offset_right = 20.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_nutv8")
+theme_override_font_sizes/font_size = 64
+text = "0/5 Allowed Windows"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1839370848]
+texture_filter = 1
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("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")
+tile_set = SubResource("TileSet_fhqol")
+
+[node name="Player" parent="." unique_id=1382806413 instance=ExtResource("3_fhqol")]
+position = Vector2(68, 624)
+scale = Vector2(2, 2)
+
+[node name="Platform Spawner" type="Node2D" parent="." unique_id=358100453]
+script = ExtResource("5_nutv8")
+
+[node name="Timer" type="Timer" parent="Platform Spawner" unique_id=2095357836]
+wait_time = 1.5
+autostart = true
+
+[node name="Markers" type="Node2D" parent="Platform Spawner" unique_id=1525160795]
+
+[node name="SpawnLoc" type="Marker2D" parent="Platform Spawner/Markers" unique_id=458826477]
+position = Vector2(310, 601)
+
+[node name="SpawnLoc2" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1122711330]
+position = Vector2(564, 554)
+
+[node name="SpawnLoc3" type="Marker2D" parent="Platform Spawner/Markers" unique_id=198751788]
+position = Vector2(690, 472)
+
+[node name="SpawnLoc4" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1235675702]
+position = Vector2(828, 415)
+
+[node name="SpawnLoc5" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1055236965]
+position = Vector2(932, 385)
+
+[node name="SpawnLoc6" type="Marker2D" parent="Platform Spawner/Markers" unique_id=499998363]
+position = Vector2(255, 544)
+
+[node name="SpawnLoc7" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1735799152]
+position = Vector2(471, 478)
+
+[node name="SpawnLoc8" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1021544066]
+position = Vector2(642, 316)
+
+[node name="SpawnLoc9" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1268643930]
+position = Vector2(885, 314)
+
+[node name="SpawnLoc10" type="Marker2D" parent="Platform Spawner/Markers" unique_id=726612793]
+position = Vector2(763, 361)
+
+[node name="SpawnLoc11" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1499600447]
+position = Vector2(363, 504)
+
+[connection signal="timeout" from="Platform Spawner/Timer" to="Platform Spawner" method="_on_timer_timeout"]
