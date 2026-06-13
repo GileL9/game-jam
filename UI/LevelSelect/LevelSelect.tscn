@@ -207,6 +207,11 @@ theme_override_fonts/font = ExtResource("1_pigic")
 theme_override_font_sizes/font_size = 24
 text = "11:52 AM"
 
+[node name="Exit" type="TextureButton" parent="." unique_id=879029810]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
