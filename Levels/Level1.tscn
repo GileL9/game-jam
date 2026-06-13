@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="3_fhqol"]
 [ext_resource type="Script" uid="uid://dm0nismykam0a" path="res://Levels/Level1Scripts/platform_spawner.gd" id="5_nutv8"]
 [ext_resource type="PackedScene" uid="uid://by8sclj042wa3" path="res://Goal/goal.tscn" id="6_05pb0"]
+[ext_resource type="Texture2D" uid="uid://42imrpp6pjan" path="res://assets/tempAssets/temp_glitch_death.png" id="7_dl8mf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nutv8"]
 texture = ExtResource("1_w77jt")
@@ -21,6 +22,15 @@ texture = ExtResource("1_w77jt")
 [sub_resource type="TileSet" id="TileSet_fhqol"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_nutv8")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcayt"]
+texture = ExtResource("7_dl8mf")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5g41i"]
+tile_size = Vector2i(32, 32)
+sources/3 = SubResource("TileSetAtlasSource_xcayt")
 
 [node name="Level1" type="Node2D" unique_id=1720741399]
 
@@ -108,5 +118,9 @@ position = Vector2(763, 361)
 
 [node name="SpawnLoc11" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1499600447]
 position = Vector2(363, 504)
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=777329123]
+tile_map_data = PackedByteArray("AAAHABMAAwAAAAAAAAACAA8AAwAAAAAAAAA=")
+tile_set = SubResource("TileSet_5g41i")
 
 [connection signal="timeout" from="Platform Spawner/Timer" to="Platform Spawner" method="_on_timer_timeout"]

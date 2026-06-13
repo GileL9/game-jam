@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bl2mqkod76opb"]
+
+[ext_resource type="Script" uid="uid://duin85a1hondx" path="res://Platform/platform_trigger.gd" id="1_g1tji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndwfg"]
+size = Vector2(43, 35)
+
+[node name="PlatformTrigger" type="Area2D" unique_id=297520628]
+script = ExtResource("1_g1tji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=429333213]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ndwfg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

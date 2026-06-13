@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="4_w0h0a"]
 [ext_resource type="Script" uid="uid://c44yefyhbkvt7" path="res://Levels/Level2Scripts/glitch_effect.gd" id="5_v115i"]
 [ext_resource type="PackedScene" uid="uid://by8sclj042wa3" path="res://Goal/goal.tscn" id="6_jglcl"]
+[ext_resource type="PackedScene" uid="uid://d0t72wluq71qd" path="res://Platform/Platform.tscn" id="7_m3ha0"]
+[ext_resource type="PackedScene" uid="uid://bl2mqkod76opb" path="res://Platform/PlatformTrigger.tscn" id="8_vd23k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3ha0"]
 texture = ExtResource("3_jglcl")
@@ -71,4 +73,10 @@ target_fps = 5
 
 [node name="Area2D" parent="." unique_id=255270968 instance=ExtResource("6_jglcl")]
 position = Vector2(319, 567)
-current_level = 2
+
+[node name="Platform" parent="." unique_id=774370483 instance=ExtResource("7_m3ha0")]
+position = Vector2(201, 351)
+reset_y_position = 350.0
+
+[node name="PlatformTrigger" parent="." unique_id=297520628 instance=ExtResource("8_vd23k")]
+position = Vector2(202, 124)

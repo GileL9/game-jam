@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://mm5cta5chjye"]
+
+[ext_resource type="Texture2D" uid="uid://42imrpp6pjan" path="res://assets/tempAssets/temp_glitch_death.png" id="1_8l7sk"]
+[ext_resource type="Script" uid="uid://cu31qbd50alnd" path="res://Spikes/spike.gd" id="1_h840o"]
+
+[node name="Spike" type="TileMapLayer" unique_id=1788376643]
+script = ExtResource("1_h840o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=174335966]
+texture = ExtResource("1_8l7sk")

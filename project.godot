@@ -24,6 +24,7 @@ window/size/viewport_height=720
 
 spikes=""
 player=""
+platforms="Group including a moving platform and a trigger telling it to teleport to a position"
 
 [input]
 
