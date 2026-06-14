@@ -40,3 +40,8 @@ func _on_level_7_pressed() -> void:
 func _on_level_6_pressed() -> void:
 	get_tree().change_scene_to_file("res://Levels/Level6.tscn")
 	pass # Replace with function body.
+
+
+func _on_level_4_pressed() -> void:
+	get_tree().change_scene_to_file("res://Levels/Level4.tscn")
+	pass # Replace with function body.

@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var player = $Player
+@onready var goal = $goal
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player.set_while_true(true)
+	goal.change_icon("sad")
 	pass # Replace with function body.
 
 
@@ -15,5 +15,6 @@ func _process(delta: float) -> void:
 func _on_kill_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		if body.has_method("kill"):
-			body.kill(Vector2(112,567))
+			body.kill(Vector2(126,594))
+		pass
 	pass # Replace with function body.

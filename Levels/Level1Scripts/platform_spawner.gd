@@ -5,10 +5,11 @@ extends Node2D
 @onready var label = $"../UI/Label"
 @onready var player = $"../Player"
 var already_spawned = []  # tracks used spawn point nodes
-
+@export var limit: int = 6
+@export var spawn_point: Vector2 = Vector2(68.0,624)
 func _process(delta: float) -> void:
-	label.text = str(already_spawned.size()) + "/6 Allowed Windows"
-	if already_spawned.size() > 6:
+	label.text = str(already_spawned.size()) + "/" + str(limit) + " Allowed Windows"
+	if already_spawned.size() > limit:
 		reset_level()
 		#reset level (create a function for that sets the player pos to (359.0,67)
 	pass
@@ -18,7 +19,7 @@ func reset_level() -> void:
 		if child is plat_scene:
 			child.queue_free()
 	already_spawned.clear()
-	player.position = Vector2(68.0, 624.0)
+	player.position = spawn_point
 func _on_timer_timeout() -> void:
 	# Get only the spawn points that are currently free
 	var available = spawn_points.get_children().filter(func(p): return p not in already_spawned)

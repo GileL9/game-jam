@@ -96,9 +96,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_v115i")
 
-[node name="Player" parent="." unique_id=1382806413 instance=ExtResource("4_w0h0a")]
+[node name="Player" parent="." unique_id=1382806413 groups=["player"] instance=ExtResource("4_w0h0a")]
 position = Vector2(68, 624)
-scale = Vector2(2, 2)
 
 [node name="GlitchEffect" type="Node2D" parent="." unique_id=1503883087]
 script = ExtResource("5_v115i")

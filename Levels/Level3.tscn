@@ -10,7 +10,7 @@
 [ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="9_q5lgr"]
 [ext_resource type="Texture2D" uid="uid://ei0cxwl6hjxc" path="res://assets/novTileset1.png" id="10_hy5j1"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xxxi4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q5lgr"]
 texture = ExtResource("10_hy5j1")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -94,7 +94,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_q5lgr"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_xxxi4")
+sources/1 = SubResource("TileSetAtlasSource_q5lgr")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twi1l"]
 size = Vector2(1207.5, 127)
@@ -133,7 +133,6 @@ texture = ExtResource("1_vybwq")
 
 [node name="Player" parent="." unique_id=1382806413 groups=["player"] instance=ExtResource("2_xb24h")]
 position = Vector2(142, 363)
-scale = Vector2(2, 2)
 
 [node name="NotRespondingEffect" type="CanvasLayer" parent="." unique_id=2064551584]
 layer = 100

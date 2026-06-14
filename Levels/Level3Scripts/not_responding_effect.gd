@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 # ── tweakable values ──────────────────────────────────────────────
-const CYCLE_SECONDS   : float = 2.0   # how long between freeze events
-const FREEZE_SECONDS  : float = 2.0   # how long the freeze lasts
+@export var CYCLE_SECONDS   : float = 2.0   # how long between freeze events
+@export var FREEZE_SECONDS  : float = 2.0   # how long the freeze lasts
 # ─────────────────────────────────────────────────────────────────
 @onready var spriteLoad = $Overlay/Sprite2D
 @onready var overlay : ColorRect = $Overlay

@@ -8,7 +8,8 @@ var haptex = preload("res://assets/pciconhappy.png")
 var sadtex = preload("res://assets/pciconsad.png")
 func _on_body_entered(body: Node2D) -> void:
 	# 1. Force visual confirmation that the engine registered the hit
-	call_deferred("_test_change")
+	if body.is_in_group("player"):	
+		call_deferred("_test_change")
 
 func _test_change() -> void:
 	if sad:

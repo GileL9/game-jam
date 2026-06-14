@@ -4,7 +4,7 @@ extends Node2D
 @onready var button = $"dugme"
 var spawned_boxes = []
 var markersF = []
-var locations = [Vector2(608,164),Vector2(224,296),Vector2(416,231),Vector2(223,453),Vector2(415,360)]
+var locations = [Vector2(447,139),Vector2(224,265),Vector2(446,329),Vector2(222,426)]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	markersF.append($"../Marker2D")
