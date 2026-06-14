@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://6mhuy52loi7k" path="res://assets/desktopNew.png" id="2_fvgb5"]
 [ext_resource type="Texture2D" uid="uid://drw3ds7o5ypvm" path="res://assets/folder_icon.png" id="3_tshe4"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvgb5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tnpda"]
+
 [node name="LevelSelect" type="Control" unique_id=171922089]
 layout_mode = 3
 anchors_preset = 15
@@ -235,16 +239,6 @@ theme_override_fonts/font = ExtResource("1_pigic")
 theme_override_font_sizes/font_size = 32
 text = "Wholle Lotta Bugs.exe"
 
-[node name="win_exp" type="Label" parent="." unique_id=239488843]
-layout_mode = 0
-offset_left = 181.0
-offset_top = 678.0
-offset_right = 281.0
-offset_bottom = 709.0
-theme_override_fonts/font = ExtResource("1_pigic")
-theme_override_font_sizes/font_size = 32
-text = "Explorer"
-
 [node name="time" type="Label" parent="." unique_id=320852234]
 layout_mode = 0
 offset_left = 1182.0
@@ -255,10 +249,50 @@ theme_override_fonts/font = ExtResource("1_pigic")
 theme_override_font_sizes/font_size = 24
 text = "11:52 AM"
 
-[node name="Exit" type="TextureButton" parent="." unique_id=879029810]
+[node name="Exit" type="Button" parent="." unique_id=72423746]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1218.0
+offset_top = 40.0
+offset_right = 1247.0
+offset_bottom = 68.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fvgb5")
+
+[node name="CreditsButton" type="Button" parent="." unique_id=2116012497]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 667.0
+offset_right = 507.0
+offset_bottom = 716.0
+
+[node name="credits" type="Label" parent="CreditsButton" unique_id=1965139429]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 11.0
+offset_right = 127.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ExplorerButton" type="Button" parent="." unique_id=101369085]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 668.0
+offset_right = 310.0
+offset_bottom = 714.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tnpda")
+
+[node name="win_exp" type="Label" parent="ExplorerButton" unique_id=239488843]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 10.0
+offset_right = 152.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("1_pigic")
+theme_override_font_sizes/font_size = 32
+text = "Explorer"
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
@@ -268,3 +302,7 @@ offset_bottom = 40.0
 [connection signal="pressed" from="Level6" to="." method="_on_level_6_pressed"]
 [connection signal="pressed" from="Level7" to="." method="_on_level_7_pressed"]
 [connection signal="pressed" from="Level8" to="." method="_on_level_7_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="ExplorerButton" to="." method="_on_explorer_pressed"]
