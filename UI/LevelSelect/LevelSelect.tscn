@@ -233,7 +233,7 @@ offset_right = 374.0
 offset_bottom = 76.0
 theme_override_fonts/font = ExtResource("1_pigic")
 theme_override_font_sizes/font_size = 32
-text = "Wholle Lotta Bugs.exe"
+text = "Whole_Lotta_Bugs.exe"
 
 [node name="win_exp" type="Label" parent="." unique_id=239488843]
 layout_mode = 0
@@ -267,4 +267,4 @@ offset_bottom = 40.0
 [connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]
 [connection signal="pressed" from="Level6" to="." method="_on_level_6_pressed"]
 [connection signal="pressed" from="Level7" to="." method="_on_level_7_pressed"]
-[connection signal="pressed" from="Level8" to="." method="_on_level_7_pressed"]
+[connection signal="pressed" from="Level8" to="." method="_on_level_8_pressed"]

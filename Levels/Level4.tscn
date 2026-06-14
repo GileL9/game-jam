@@ -7,11 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://by8sclj042wa3" path="res://Goal/goal.tscn" id="5_qgpl5"]
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="5_vgbee"]
 [ext_resource type="PackedScene" uid="uid://vo6eqhh20v7" path="res://File/File.tscn" id="6_vgbee"]
+[ext_resource type="AudioStream" uid="uid://boft84gc1ivwv" path="res://assets/windows-xp-error-sound_hAvsZEEn.wav" id="8_jld50"]
 [ext_resource type="Script" uid="uid://cdku2mbc5td7h" path="res://Levels/Level3Scripts/not_responding_effect.gd" id="8_v72e1"]
 [ext_resource type="Texture2D" uid="uid://cbfcyvunq4668" path="res://assets/loading.png" id="9_so18s"]
 [ext_resource type="Script" uid="uid://j4bxg6k0woal" path="res://Levels/Level3Scripts/sprite_2dRoatting.gd" id="10_hg5yk"]
 [ext_resource type="Texture2D" uid="uid://ei0cxwl6hjxc" path="res://assets/novTileset1.png" id="10_v72e1"]
 [ext_resource type="Script" uid="uid://c44yefyhbkvt7" path="res://Levels/Level2Scripts/glitch_effect.gd" id="12_hg5yk"]
+[ext_resource type="AudioStream" uid="uid://bxfqgbkt2kb7y" path="res://assets/windows-empty-recycle-bin-window-sound_1lQ5odiS.wav" id="14_svocn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_so18s"]
 texture = ExtResource("10_v72e1")
@@ -171,6 +173,9 @@ position = Vector2(820, 452)
 [node name="SpawnLoc7" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1563104101]
 position = Vector2(1058, 397)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Platform Spawner" unique_id=1846978368]
+stream = ExtResource("8_jld50")
+
 [node name="goal" parent="." unique_id=255270968 instance=ExtResource("5_qgpl5")]
 position = Vector2(143, 567)
 current_level = 4
@@ -241,10 +246,13 @@ offset_right = 321.0
 offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("2_2qv2g")
 theme_override_font_sizes/font_size = 24
-text = "Wholle Lotta Bugs.exe"
+text = "Whole_Lotta_Bugs.exe"
 
 [node name="GlitchEffect" type="Node2D" parent="." unique_id=1126225659]
 script = ExtResource("12_hg5yk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=123106536]
+stream = ExtResource("14_svocn")
 
 [connection signal="timeout" from="Platform Spawner/Timer" to="Platform Spawner" method="_on_timer_timeout"]
 [connection signal="body_entered" from="KillArea" to="." method="_on_kill_area_body_entered"]

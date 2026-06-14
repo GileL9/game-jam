@@ -186,7 +186,7 @@ offset_right = 321.0
 offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("1_13v3d")
 theme_override_font_sizes/font_size = 24
-text = "Wholle Lotta Bugs.exe"
+text = "Whole_Lotta_Bugs.exe"
 
 [node name="title2" type="Label" parent="." unique_id=1321330678]
 offset_left = 978.0

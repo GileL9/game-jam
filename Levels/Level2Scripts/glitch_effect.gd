@@ -1,7 +1,7 @@
 # fps_limiter.gd
 extends Node
 
-var target_fps: int = 20  # Set your desired FPS cap here
+var target_fps: int = 5  # Set your desired FPS cap here
 var items = []
 var _frame_time: float
 var _accumulator: float = 0.0

@@ -4,6 +4,7 @@ extends Node2D
 @onready var plat_scene = preload("res://Levels/Level1Scripts/windows_not_resp_platform.tscn")
 @onready var label = $"../UI/Label"
 @onready var player = $"../Player"
+@onready var errorSFX = $AudioStreamPlayer2D
 var already_spawned = []  # tracks used spawn point nodes
 @export var limit: int = 6
 @export var spawn_point: Vector2 = Vector2(68.0,624)
@@ -35,6 +36,7 @@ func _on_timer_timeout() -> void:
 func spawn_platform(pos: Vector2) -> void:
 	var f = plat_scene.instantiate()
 	f.position = pos
+	errorSFX.play()
 	add_child(f)
 
 	# When the platform is removed from the scene, free its spawn point
