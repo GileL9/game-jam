@@ -13,9 +13,9 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = false
 	elif velocity.x < 0:
 		sprite.flip_h = true
-	if not is_on_floor():
-		pass
-		#sprite.play("jump")
+	if	not is_on_floor():
+		sprite.play("jump")
+		#dont loop it
 	elif abs(velocity.x) > 5:
 		sprite.play("walk")
 	else:
