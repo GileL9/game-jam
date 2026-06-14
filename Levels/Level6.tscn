@@ -68,3 +68,12 @@ tile_set = SubResource("TileSet_qityn")
 [node name="Player" parent="." unique_id=1382806413 groups=["player"] instance=ExtResource("4_jghee")]
 position = Vector2(414, 573)
 scale = Vector2(2, 2)
+
+[node name="title" type="Label" parent="." unique_id=1122303452]
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 321.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("1_13v3d")
+theme_override_font_sizes/font_size = 24
+text = "Wholle Lotta Bugs.exe"

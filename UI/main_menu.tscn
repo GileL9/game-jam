@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvqpr8yd817pv"]
 
-[ext_resource type="Texture2D" uid="uid://dwwhjut5k36os" path="res://assets/tempAssets/StartingBackground.png" id="1_p8ccj"]
 [ext_resource type="Script" uid="uid://bv0gjprp28jb4" path="res://UI/main_menu.gd" id="1_tk8dj"]
+[ext_resource type="Texture2D" uid="uid://tqkm7ofcjreq" path="res://assets/login desk.png" id="2_f40uw"]
 [ext_resource type="Texture2D" uid="uid://xv0bjcmlithn" path="res://assets/loginbar.png" id="3_d8nwk"]
 [ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="4_4cwpn"]
 [ext_resource type="Texture2D" uid="uid://dyo4sru7q2wxh" path="res://assets/windows_icon.png" id="5_f40uw"]
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_p8ccj")
+texture = ExtResource("2_f40uw")
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect" unique_id=1654401623]
 layout_mode = 1
@@ -79,5 +79,41 @@ theme_override_fonts/font = ExtResource("4_4cwpn")
 theme_override_font_sizes/font_size = 24
 placeholder_text = "Enter name..."
 flat = true
+
+[node name="Label" type="Label" parent="." unique_id=1657872413]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -462.0
+offset_top = 116.0
+offset_right = 463.0
+offset_bottom = 237.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_4cwpn")
+theme_override_font_sizes/font_size = 128
+text = "Wholle Lotta Bugs"
+
+[node name="start" type="Label" parent="." unique_id=27651826]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 678.0
+offset_right = 86.0
+offset_bottom = 709.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("4_4cwpn")
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="time" type="Label" parent="." unique_id=1952194748]
+layout_mode = 0
+offset_left = 1182.0
+offset_top = 681.0
+offset_right = 1282.0
+offset_bottom = 712.0
+theme_override_fonts/font = ExtResource("4_4cwpn")
+theme_override_font_sizes/font_size = 24
+text = "11:52 AM"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

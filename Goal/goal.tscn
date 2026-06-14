@@ -1,20 +1,63 @@
 [gd_scene format=3 uid="uid://by8sclj042wa3"]
 
 [ext_resource type="Script" uid="uid://dxo4coln7lo5h" path="res://Goal/goal.gd" id="1_hspb0"]
-[ext_resource type="Texture2D" uid="uid://jy7cvaj158vm" path="res://assets/tempAssets/goal.jpg" id="1_wys2v"]
+[ext_resource type="Texture2D" uid="uid://dqskmtemis4eq" path="res://assets/pciconhappy.png" id="2_3iwka"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35lpn"]
 size = Vector2(49, 48)
+
+[sub_resource type="Animation" id="Animation_3iwka"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8.0]
+}
+
+[sub_resource type="Animation" id="Animation_y78nh"]
+resource_name = "new_animation"
+length = 1.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8.0, -12.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_po8gq"]
+_data = {
+&"RESET": SubResource("Animation_3iwka"),
+&"new_animation": SubResource("Animation_y78nh")
+}
 
 [node name="Goal" type="Area2D" unique_id=255270968]
 script = ExtResource("1_hspb0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1591325595]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_wys2v")
+texture_filter = 1
+position = Vector2(0, 8)
+texture = ExtResource("2_3iwka")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=564399013]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_35lpn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2147413630]
+libraries/ = SubResource("AnimationLibrary_po8gq")
+autoplay = &"new_animation"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://yhic72ptt3vk"]
 
-[ext_resource type="Texture2D" uid="uid://dhldx06cgp5kr" path="res://assets/tempAssets/temp kutija.png" id="1_ebwcw"]
+[ext_resource type="Texture2D" uid="uid://cfh3qkf1d4xrp" path="res://assets/zipfile_icon.png" id="1_ebwcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ebwcw"]
-size = Vector2(64, 64)
+size = Vector2(64, 52)
 
 [node name="Box" type="RigidBody2D" unique_id=867309237]
 can_sleep = false
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1992620172]
 texture_filter = 1
-scale = Vector2(2, 2)
+position = Vector2(0.99999994, 0)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_ebwcw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1567450810]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_ebwcw")

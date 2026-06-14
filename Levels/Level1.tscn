@@ -1,36 +1,78 @@
 [gd_scene format=4 uid="uid://foivc34e70um"]
 
 [ext_resource type="Texture2D" uid="uid://cqu8icw3d004u" path="res://assets/win_wallpaper.png" id="1_nutv8"]
-[ext_resource type="Texture2D" uid="uid://dv2q5vx32tyx5" path="res://assets/tempAssets/tempTileset.png" id="1_w77jt"]
 [ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="2_nutv8"]
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="3_fhqol"]
+[ext_resource type="Texture2D" uid="uid://du2w74o760ulf" path="res://assets/tileset1.png" id="4_dl8mf"]
 [ext_resource type="Script" uid="uid://dm0nismykam0a" path="res://Levels/Level1Scripts/platform_spawner.gd" id="5_nutv8"]
 [ext_resource type="PackedScene" uid="uid://by8sclj042wa3" path="res://Goal/goal.tscn" id="6_05pb0"]
-[ext_resource type="Texture2D" uid="uid://42imrpp6pjan" path="res://assets/tempAssets/temp_glitch_death.png" id="7_dl8mf"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nutv8"]
-texture = ExtResource("1_w77jt")
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="TileSet" id="TileSet_fhqol"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_nutv8")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcayt"]
-texture = ExtResource("7_dl8mf")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05pb0"]
+texture = ExtResource("4_dl8mf")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.7060394, 16, -6.3229065, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.7060394, 16, -6.3229065, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.7060394, 16, -6.3229065, 16, 16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.7060394, 16, -6.3229065, 16, 16, -16, 16)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.7060394, 16, -6.3229065, 16, 16, -16, 16)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.7060394, 16, -6.3229065, 16, 16, -16, 16)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.7060394, 16, -6.3229065, 16, 16, -16, 16)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -5.7060394, 16, -6.3229065, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="TileSet" id="TileSet_5g41i"]
+[sub_resource type="TileSet" id="TileSet_dl8mf"]
 tile_size = Vector2i(32, 32)
-sources/3 = SubResource("TileSetAtlasSource_xcayt")
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_05pb0")
 
 [node name="Level1" type="Node2D" unique_id=1720741399]
 
@@ -46,6 +88,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_nutv8")
@@ -62,16 +105,10 @@ offset_bottom = 90.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_nutv8")
 theme_override_font_sizes/font_size = 64
-text = "0/5 Allowed Windows"
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1839370848]
-texture_filter = 1
-scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("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")
-tile_set = SubResource("TileSet_fhqol")
+text = "0/7 Allowed Windows"
 
 [node name="Area2D" parent="." unique_id=255270968 instance=ExtResource("6_05pb0")]
-position = Vector2(1131, 134)
+position = Vector2(1121, 310)
 
 [node name="Player" parent="." unique_id=1382806413 instance=ExtResource("3_fhqol")]
 position = Vector2(68, 624)
@@ -87,52 +124,49 @@ autostart = true
 [node name="Markers" type="Node2D" parent="Platform Spawner" unique_id=1525160795]
 
 [node name="SpawnLoc" type="Marker2D" parent="Platform Spawner/Markers" unique_id=458826477]
-position = Vector2(310, 601)
+position = Vector2(425, 557)
+
+[node name="SpawnLoc6" type="Marker2D" parent="Platform Spawner/Markers" unique_id=888139601]
+position = Vector2(377, 581)
+
+[node name="SpawnLoc11" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1665668848]
+position = Vector2(331, 607)
 
 [node name="SpawnLoc2" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1122711330]
-position = Vector2(564, 554)
+position = Vector2(572, 510)
 
 [node name="SpawnLoc3" type="Marker2D" parent="Platform Spawner/Markers" unique_id=198751788]
-position = Vector2(690, 472)
+position = Vector2(712, 469)
 
 [node name="SpawnLoc4" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1235675702]
-position = Vector2(834, 392)
+position = Vector2(855, 413)
 
-[node name="SpawnLoc12" type="Marker2D" parent="Platform Spawner/Markers" unique_id=2074487917]
-position = Vector2(765, 342)
+[node name="SpawnLoc5" type="Marker2D" parent="Platform Spawner/Markers" unique_id=22522056]
+position = Vector2(980, 348)
 
-[node name="SpawnLoc13" type="Marker2D" parent="Platform Spawner/Markers" unique_id=389523117]
-position = Vector2(926, 312)
+[node name="SpawnLoc7" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1893326485]
+position = Vector2(921, 391)
 
-[node name="SpawnLoc14" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1297163982]
-position = Vector2(544, 415)
+[node name="SpawnLoc8" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1175703410]
+position = Vector2(774, 449)
 
-[node name="SpawnLoc15" type="Marker2D" parent="Platform Spawner/Markers" unique_id=798491886]
-position = Vector2(366, 588)
+[node name="SpawnLoc9" type="Marker2D" parent="Platform Spawner/Markers" unique_id=350315529]
+position = Vector2(499, 546)
 
-[node name="SpawnLoc5" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1055236965]
-position = Vector2(932, 385)
+[node name="SpawnLoc10" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1237831134]
+position = Vector2(634, 491)
 
-[node name="SpawnLoc6" type="Marker2D" parent="Platform Spawner/Markers" unique_id=499998363]
-position = Vector2(255, 544)
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=161831566]
+tile_map_data = PackedByteArray("AAAAABUAAAAAAAMAAAABABUAAAABAAMAAAACABUAAAABAAMAAAADABUAAAABAAMAAAAEABUAAAABAAMAAAAFABUAAAABAAMAAAAGABUAAAABAAMAAAAHABUAAAABAAMAAAAIABUAAAABAAMAAAAJABUAAAABAAMAAAAKABUAAAABAAMAAAALABUAAAABAAMAAAAMABUAAAABAAMAAAANABUAAAABAAMAAAAOABUAAAABAAMAAAAPABUAAAABAAMAAAAQABUAAAABAAMAAAAUABUAAAABAAMAAAAVABUAAAABAAMAAAARABUAAAABAAMAAAASABUAAAABAAMAAAATABUAAAABAAMAAAAWABUAAAABAAMAAAAXABUAAAABAAMAAAAYABUAAAABAAMAAAAZABUAAAABAAMAAAAaABUAAAABAAMAAAAbABUAAAABAAMAAAAcABUAAAABAAMAAAAdABUAAAABAAMAAAAeABUAAAABAAMAAAAfABUAAAABAAMAAAAgABUAAAABAAMAAAAhABUAAAABAAMAAAAiABUAAAABAAMAAAAjABUAAAABAAMAAAAkABUAAAABAAMAAAAlABUAAAABAAMAAAAmABUAAAABAAMAAAAnABUAAAACAAMAAAAnABQAAAADAAIAAAAnABMAAAADAAIAAAAnABIAAAADAAIAAAAnABEAAAADAAIAAAAnABAAAAADAAIAAAAnAA8AAAADAAIAAAAnAA4AAAADAAIAAAAnAA0AAAADAAIAAAAnAAwAAAADAAIAAAAnAAsAAAADAAIAAAAnAAoAAAADAAIAAAAnAAkAAAADAAIAAAAnAAgAAAADAAIAAAAnAAcAAAADAAIAAAAnAAYAAAADAAIAAAAnAAUAAAADAAIAAAAnAAQAAAADAAIAAAAnAAMAAAADAAIAAAAnAAIAAAADAAIAAAAnAAEAAAADAAIAAAAnAAAAAAAEAAMAAAAjAAAAAAABAAIAAAAiAAAAAAABAAIAAAAhAAAAAAABAAIAAAAgAAAAAAABAAIAAAAfAAAAAAABAAIAAAAeAAAAAAABAAIAAAAdAAAAAAABAAIAAAAcAAAAAAABAAIAAAAbAAAAAAABAAIAAAAaAAAAAAABAAIAAAAZAAAAAAABAAIAAAAYAAAAAAABAAIAAAAXAAAAAAABAAIAAAAWAAAAAAABAAIAAAAVAAAAAAABAAIAAAAUAAAAAAABAAIAAAATAAAAAAABAAIAAAASAAAAAAABAAIAAAARAAAAAAABAAIAAAAQAAAAAAABAAIAAAAPAAAAAAABAAIAAAAOAAAAAAABAAIAAAANAAAAAAABAAIAAAAMAAAAAAABAAIAAAALAAAAAAABAAIAAAAKAAAAAAABAAIAAAAJAAAAAAABAAIAAAAIAAAAAAABAAIAAAAHAAAAAAABAAIAAAAGAAAAAAABAAIAAAAFAAAAAAABAAIAAAAEAAAAAAABAAIAAAADAAAAAAABAAIAAAACAAAAAAABAAIAAAABAAAAAAABAAIAAAAAAAAAAAAAAAIAAAAAAAEAAAADAAMAAAAAAAIAAAADAAMAAAAAAAMAAAADAAMAAAAAAAQAAAADAAMAAAAAAAUAAAADAAMAAAAAAAYAAAADAAMAAAAAAAcAAAADAAMAAAAAAAgAAAADAAMAAAAAAAkAAAADAAMAAAAAAAoAAAADAAMAAAAAAAsAAAADAAMAAAAAAAwAAAADAAMAAAAAAA0AAAADAAMAAAAAAA4AAAADAAMAAAAAAA8AAAADAAMAAAAAABAAAAADAAMAAAAAABEAAAADAAMAAAAAABIAAAADAAMAAAAAABMAAAADAAMAAAAAABQAAAADAAMAAAAGABIAAAACAAAAAAAGABMAAAADAAEAAAAHABIAAAADAAAAAAAHABMAAAADAAEAAAAIABIAAAAEAAAAAAAIABMAAAAEAAEAAAAFABIAAAAAAAAAAAAFABMAAAAAAAEAAAAhAAsAAAAGAAAAAAAhAAwAAAAGAAEAAAAiAAsAAAAGAAAAAAAiAAwAAAAGAAEAAAAjAAsAAAAGAAAAAAAjAAwAAAAGAAEAAAAkAAsAAAAGAAAAAAAkAAwAAAAGAAEAAAAlAAsAAAAHAAAAAAAlAAwAAAAHAAEAAAAgAAsAAAAFAAAAAAAgAAwAAAAFAAEAAAAlAAAAAAAEAAIAAAAmAAAAAAAFAAIAAAAkAAAAAAABAAIAAAA=")
+tile_set = SubResource("TileSet_dl8mf")
 
-[node name="SpawnLoc7" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1735799152]
-position = Vector2(471, 478)
-
-[node name="SpawnLoc8" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1021544066]
-position = Vector2(410, 580)
-
-[node name="SpawnLoc9" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1268643930]
-position = Vector2(589, 481)
-
-[node name="SpawnLoc10" type="Marker2D" parent="Platform Spawner/Markers" unique_id=726612793]
-position = Vector2(839, 312)
-
-[node name="SpawnLoc11" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1499600447]
-position = Vector2(251, 598)
-
-[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=777329123]
-tile_map_data = PackedByteArray("AAAHABMAAwAAAAAAAAACAA8AAwAAAAAAAAA=")
-tile_set = SubResource("TileSet_5g41i")
+[node name="title" type="Label" parent="." unique_id=238304240]
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 321.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("2_nutv8")
+theme_override_font_sizes/font_size = 24
+text = "Wholle Lotta Bugs.exe"
 
 [connection signal="timeout" from="Platform Spawner/Timer" to="Platform Spawner" method="_on_timer_timeout"]

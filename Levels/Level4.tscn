@@ -83,7 +83,8 @@ position = Vector2(376, 214)
 position = Vector2(847, 329)
 
 [node name="Goal" parent="." unique_id=255270968 instance=ExtResource("5_qgpl5")]
-position = Vector2(92, 109)
+position = Vector2(121, 105)
+current_level = 4
 
 [node name="File" parent="." unique_id=1116898668 instance=ExtResource("6_vgbee")]
 position = Vector2(590, 539)
@@ -101,7 +102,6 @@ scale = Vector2(2, 2)
 [node name="NotRespondingEffect" type="CanvasLayer" parent="." unique_id=1223896367]
 layer = 100
 script = ExtResource("8_v72e1")
-FREEZE_SECONDS = 1.0
 
 [node name="Overlay" type="ColorRect" parent="NotRespondingEffect" unique_id=1759392685]
 anchors_preset = 15
@@ -117,5 +117,14 @@ position = Vector2(640, 360)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("9_so18s")
 script = ExtResource("10_hg5yk")
+
+[node name="title" type="Label" parent="." unique_id=1861739225]
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 321.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("2_2qv2g")
+theme_override_font_sizes/font_size = 24
+text = "Wholle Lotta Bugs.exe"
 
 [connection signal="timeout" from="Platform Spawner/Timer" to="Platform Spawner" method="_on_timer_timeout"]

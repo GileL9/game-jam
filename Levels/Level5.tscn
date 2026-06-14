@@ -5,9 +5,11 @@
 [ext_resource type="Script" uid="uid://tfyuxoo5vovh" path="res://Levels/Level5Scripts/box_spawner.gd" id="3_31wo2"]
 [ext_resource type="PackedScene" uid="uid://yhic72ptt3vk" path="res://Levels/Level5Scripts/box.tscn" id="3_uwj6k"]
 [ext_resource type="Texture2D" uid="uid://dv2q5vx32tyx5" path="res://assets/tempAssets/tempTileset.png" id="4_3toyu"]
-[ext_resource type="Texture2D" uid="uid://bwkufv8hbuf5" path="res://assets/tempAssets/tempDispenser.png" id="5_pjvod"]
-[ext_resource type="Texture2D" uid="uid://cd0w40ku6xma2" path="res://assets/tempAssets/dugme za spawnovanje kutija.png" id="6_ioxke"]
+[ext_resource type="Texture2D" uid="uid://chemk4gdp5pxl" path="res://assets/box_zipfile_spawner.png" id="6_31wo2"]
+[ext_resource type="Texture2D" uid="uid://dns0nkna4nlm1" path="res://assets/dugme.png" id="6_w1sat"]
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="7_f6i8f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ioxke"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pjvod"]
 texture = ExtResource("4_3toyu")
@@ -23,8 +25,6 @@ texture = ExtResource("4_3toyu")
 [sub_resource type="TileSet" id="TileSet_ioxke"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_pjvod")
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ioxke"]
 
 [node name="Level5" type="Node2D" unique_id=254743443]
 
@@ -42,26 +42,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 24.0
 offset_top = 25.0
-offset_right = 715.0
-offset_bottom = 684.0
+offset_right = 75.52173
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.92, 0.92)
 texture = ExtResource("2_31wo2")
-
-[node name="Label" type="Label" parent="UI" unique_id=1480491755]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_top = 67.0
-offset_right = 20.0
-offset_bottom = 90.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_uwj6k")
-theme_override_font_sizes/font_size = 64
-text = "current entity limit is 10..."
 
 [node name="BoxSpawner" type="Node2D" parent="." unique_id=730412880]
 script = ExtResource("3_31wo2")
@@ -81,6 +67,16 @@ position = Vector2(1158, 370)
 [node name="Box5" parent="BoxSpawner" unique_id=801694352 instance=ExtResource("3_uwj6k")]
 position = Vector2(1206, 294)
 
+[node name="dugme" type="Sprite2D" parent="BoxSpawner" unique_id=1473049923]
+texture_filter = 1
+position = Vector2(416, 164.92308)
+texture = ExtResource("6_w1sat")
+
+[node name="Area2D" type="Area2D" parent="BoxSpawner/dugme" unique_id=2104916179]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxSpawner/dugme/Area2D" unique_id=869108817]
+shape = SubResource("CircleShape2D_ioxke")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2024050458]
 texture_filter = 1
 scale = Vector2(2, 2)
@@ -88,29 +84,34 @@ tile_map_data = PackedByteArray("AAAAABUAAAAAAAAAAAABABUAAAAAAAAAAAACABUAAAAAAAA
 tile_set = SubResource("TileSet_ioxke")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=561493061]
-position = Vector2(77, 96)
+position = Vector2(65, 74)
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=1560929151]
+position = Vector2(94, 73)
+
+[node name="Marker2D4" type="Marker2D" parent="." unique_id=1826628226]
+position = Vector2(120, 72)
 
 [node name="dispenser" type="Sprite2D" parent="." unique_id=1103887384]
 texture_filter = 1
-position = Vector2(76, 81)
-texture = ExtResource("5_pjvod")
-
-[node name="dugme" type="Sprite2D" parent="." unique_id=1473049923]
-texture_filter = 1
-position = Vector2(608, 160)
-scale = Vector2(2, 2)
-texture = ExtResource("6_ioxke")
-
-[node name="Area2D" type="Area2D" parent="dugme" unique_id=2104916179]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="dugme/Area2D" unique_id=869108817]
-shape = SubResource("CircleShape2D_ioxke")
+position = Vector2(93, 71)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_31wo2")
 
 [node name="Player" parent="." unique_id=1382806413 groups=["player"] instance=ExtResource("7_f6i8f")]
 position = Vector2(76, 630)
 scale = Vector2(2, 2)
 
 [node name="Marker2D2" type="Marker2D" parent="." unique_id=2018721346]
-position = Vector2(415, 349)
+position = Vector2(225, 296)
 
-[connection signal="body_entered" from="dugme/Area2D" to="BoxSpawner" method="_on_area_2d_body_entered"]
+[node name="title" type="Label" parent="." unique_id=1172234904]
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 321.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("2_uwj6k")
+theme_override_font_sizes/font_size = 24
+text = "Wholle Lotta Bugs.exe"
+
+[connection signal="body_entered" from="BoxSpawner/dugme/Area2D" to="BoxSpawner" method="_on_area_2d_body_entered"]

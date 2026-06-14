@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cgydev7cl46ny" path="res://assets/idebckgnd-backgrnd.png" id="2_isoma"]
 [ext_resource type="Texture2D" uid="uid://dv2q5vx32tyx5" path="res://assets/tempAssets/tempTileset.png" id="3_4km2w"]
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="4_58uy7"]
+[ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="5_gxfhd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k78pi"]
 texture = ExtResource("3_4km2w")
@@ -62,5 +63,14 @@ scale = Vector2(2, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1418133204]
 position = Vector2(740.5, 722.5)
 shape = SubResource("RectangleShape2D_jghee")
+
+[node name="title" type="Label" parent="." unique_id=188460286]
+offset_left = 38.0
+offset_top = 5.0
+offset_right = 321.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("5_gxfhd")
+theme_override_font_sizes/font_size = 24
+text = "Wholle Lotta Bugs.exe"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

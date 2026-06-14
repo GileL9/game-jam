@@ -57,5 +57,6 @@ texture = ExtResource("2_rhbp0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=239379532]
 libraries/ = SubResource("AnimationLibrary_mfsrk")
+autoplay = &"file_animation"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

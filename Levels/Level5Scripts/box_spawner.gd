@@ -1,12 +1,15 @@
 extends Node2D
 
-@onready var label = $"../UI/Label"
 @onready var box_scene = preload("res://Levels/Level5Scripts/box.tscn")
-@onready var button = $"../dugme"
+@onready var button = $"dugme"
 var spawned_boxes = []
-var locations = [Vector2(608,160),Vector2(224,288),Vector2(416,224),Vector2(223,448),Vector2(415,512)]
+var markersF = []
+var locations = [Vector2(608,164),Vector2(224,296),Vector2(416,231),Vector2(223,453),Vector2(415,360)]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	markersF.append($"../Marker2D")
+	markersF.append($"../Marker2D3")
+	markersF.append($"../Marker2D4")
 	for child in get_children():
 		spawned_boxes.append(child)
 	change_loc_button()
@@ -23,7 +26,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		change_loc_button()
 func spawn_box():
 	var b = box_scene.instantiate()
-	b.position = $"../Marker2D".position
+	b.position =markersF.pick_random().position
 	add_child.call_deferred(b)
 	spawned_boxes.append(b)
 	if spawned_boxes.size() > 9:
@@ -35,4 +38,5 @@ func spawn_box():
 
 func change_loc_button():
 	button.position = locations.pick_random()
+	
 	pass
