@@ -17,13 +17,13 @@ func _process(delta: float) -> void:
 	if items.size() == 5:
 		new_fps = 5
 	if items.size() == 4:
-		new_fps = 10
+		new_fps = 5
 	if items.size() == 3:
-		new_fps = 15
+		new_fps = 10
 	if items.size() == 2:
-		new_fps = 20
+		new_fps = 10
 	if items.size() == 1:
-		new_fps = 25
+		new_fps = 15
 	if items.size() == 0:
 		new_fps = 60
 		goal.change_icon("happy")
