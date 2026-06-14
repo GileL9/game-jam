@@ -50,3 +50,11 @@ func _on_level_4_pressed() -> void:
 func _on_level_8_pressed() -> void:
 	get_tree().change_scene_to_file("res://Levels/Level8.tscn")
 	pass # Replace with function body.
+func _on_exit_pressed() -> void:
+	get_tree().quit()
+
+func _on_credits_pressed() -> void:
+	get_tree().change_scene_to_file("res://UI/LevelSelect/Credits.tscn")
+
+func _on_explorer_pressed() -> void:
+	get_tree().change_scene_to_file("res://UI/LevelSelect/LevelSelect.tscn")

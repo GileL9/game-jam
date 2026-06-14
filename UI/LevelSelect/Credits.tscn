@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://4x1pvjdjp7q7"]
+
+[ext_resource type="Script" uid="uid://cka6fc3ee38tb" path="res://UI/LevelSelect/level_select.gd" id="1_40u0p"]
+[ext_resource type="Texture2D" uid="uid://6mhuy52loi7k" path="res://assets/desktopNew.png" id="1_y8102"]
+[ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="2_40u0p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nog6t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iik10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40u0p"]
+
+[node name="Credits" type="Control" unique_id=116551434]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40u0p")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1411669620]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y8102")
+
+[node name="start" type="Label" parent="." unique_id=166626474]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 678.0
+offset_right = 86.0
+offset_bottom = 709.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_40u0p")
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="start2" type="Label" parent="." unique_id=1973536800]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 45.0
+offset_right = 374.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("2_40u0p")
+theme_override_font_sizes/font_size = 32
+text = "Wholle Lotta Bugs.exe"
+
+[node name="time" type="Label" parent="." unique_id=56031491]
+layout_mode = 0
+offset_left = 1182.0
+offset_top = 681.0
+offset_right = 1282.0
+offset_bottom = 712.0
+theme_override_fonts/font = ExtResource("2_40u0p")
+theme_override_font_sizes/font_size = 24
+text = "11:52 AM"
+
+[node name="Exit" type="Button" parent="." unique_id=205042629]
+layout_mode = 0
+offset_left = 1218.0
+offset_top = 40.0
+offset_right = 1247.0
+offset_bottom = 68.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nog6t")
+
+[node name="CreditsButton" type="Button" parent="." unique_id=946211235]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 667.0
+offset_right = 507.0
+offset_bottom = 716.0
+
+[node name="credits" type="Label" parent="CreditsButton" unique_id=1690391412]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 11.0
+offset_right = 127.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("2_40u0p")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ExplorerButton" type="Button" parent="." unique_id=535001147]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 668.0
+offset_right = 310.0
+offset_bottom = 714.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_iik10")
+
+[node name="win_exp" type="Label" parent="ExplorerButton" unique_id=1440835867]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 10.0
+offset_right = 152.0
+offset_bottom = 41.0
+theme_override_fonts/font = ExtResource("2_40u0p")
+theme_override_font_sizes/font_size = 32
+text = "Explorer"
+
+[node name="credits" type="Label" parent="." unique_id=1232255387]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062000003
+anchor_top = 0.125
+anchor_right = 0.062000003
+anchor_bottom = 0.125
+offset_left = 0.6399994
+offset_top = 52.0
+offset_right = 1162.64
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_40u0p")
+theme_override_font_sizes/font_size = 64
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="credits2" type="Label" parent="." unique_id=2073303408]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062000003
+anchor_top = 0.21000001
+anchor_right = 0.062000003
+anchor_bottom = 0.21000001
+offset_left = 0.6399994
+offset_top = 51.799988
+offset_right = 1162.64
+offset_bottom = 527.8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_40u0p")
+theme_override_font_sizes/font_size = 48
+text = "Programming & Game Design
+Nebojsa Djuric, Anastasija Lazic
+
+Sprites, backgrounds, animation
+Anastasija Zdravkovic
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit2" type="Button" parent="." unique_id=2004136544]
+layout_mode = 0
+offset_left = 1218.0
+offset_top = 40.0
+offset_right = 1247.0
+offset_bottom = 68.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_40u0p")
+
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="ExplorerButton" to="." method="_on_explorer_pressed"]
+[connection signal="pressed" from="Exit2" to="." method="_on_exit_pressed"]
