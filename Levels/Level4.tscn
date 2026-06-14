@@ -17,21 +17,21 @@
 texture = ExtResource("10_v72e1")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.8554306, 16, -3.546997, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8, 16, -8, 16, 16, -16, 16)
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.8554306, 16, -3.546997, 16, 16, -16, 16)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8, 16, -8, 16, 16, -16, 16)
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.8554306, 16, -3.546997, 16, 16, -16, 16)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8, 16, -8, 16, 16, -16, 16)
 3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.8554306, 16, -3.546997, 16, 16, -16, 16)
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8, 16, -8, 16, 16, -16, 16)
 4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.8554306, 16, -3.546997, 16, 16, -16, 16)
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8, 16, -8, 16, 16, -16, 16)
 5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.8554306, 16, -3.546997, 16, 16, -16, 16)
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8, 16, -8, 16, 16, -16, 16)
 6:0/0 = 0
-6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.8554306, 16, -3.546997, 16, 16, -16, 16)
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8, 16, -8, 16, 16, -16, 16)
 7:0/0 = 0
-7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3.8554306, 16, -3.546997, 16, 16, -16, 16)
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8, 16, -8, 16, 16, -16, 16)
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:1/0 = 0
@@ -148,7 +148,10 @@ autostart = true
 [node name="Markers" type="Node2D" parent="Platform Spawner" unique_id=767354190]
 
 [node name="SpawnLoc" type="Marker2D" parent="Platform Spawner/Markers" unique_id=784896222]
-position = Vector2(537, 511)
+position = Vector2(591, 563)
+
+[node name="SpawnLoc8" type="Marker2D" parent="Platform Spawner/Markers" unique_id=1647523155]
+position = Vector2(378, 633)
 
 [node name="SpawnLoc2" type="Marker2D" parent="Platform Spawner/Markers" unique_id=205726829]
 position = Vector2(952, 418)

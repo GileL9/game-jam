@@ -2,19 +2,31 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -500
-
+@onready var sprite = $AnimatedSprite2D
 var continuous_movement: bool = false  # Toggle this to enable the mechanic
 var last_direction: float = 0.0
 var last_jump: bool = false
 
 func _physics_process(delta: float) -> void:
+	#animation
+	if velocity.x > 0:
+		sprite.flip_h = false
+	elif velocity.x < 0:
+		sprite.flip_h = true
+	if not is_on_floor():
+		pass
+		#sprite.play("jump")
+	elif abs(velocity.x) > 5:
+		sprite.play("walk")
+	else:
+		sprite.play("idle")
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	var direction := Input.get_axis("left", "right")
 	var jump_pressed := Input.is_action_just_pressed("jump")
-
+	
 	if continuous_movement:
 		# Update last inputs only when new input is given
 		if direction != 0:
