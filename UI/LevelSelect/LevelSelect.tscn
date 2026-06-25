@@ -4,10 +4,17 @@
 [ext_resource type="FontFile" uid="uid://d3w8ic4o04s8j" path="res://assets/W95F.otf" id="1_pigic"]
 [ext_resource type="Texture2D" uid="uid://6mhuy52loi7k" path="res://assets/desktopNew.png" id="2_fvgb5"]
 [ext_resource type="Texture2D" uid="uid://drw3ds7o5ypvm" path="res://assets/folder_icon.png" id="3_tshe4"]
+[ext_resource type="Texture2D" uid="uid://bmmp1x13asole" path="res://assets/platformaa.png" id="5_tnpda"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fvgb5"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tfq3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ovkvc"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tnpda"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pnd5t"]
 
 [node name="LevelSelect" type="Control" unique_id=171922089]
 layout_mode = 3
@@ -257,12 +264,19 @@ offset_right = 1247.0
 offset_bottom = 68.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_fvgb5")
 
+[node name="Platformaa" type="Sprite2D" parent="." unique_id=165026854]
+position = Vector2(412, 691.5)
+scale = Vector2(0.64, 0.6375002)
+texture = ExtResource("5_tnpda")
+
 [node name="CreditsButton" type="Button" parent="." unique_id=2116012497]
 layout_mode = 0
 offset_left = 316.0
 offset_top = 667.0
 offset_right = 507.0
 offset_bottom = 716.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2tfq3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ovkvc")
 
 [node name="credits" type="Label" parent="CreditsButton" unique_id=1965139429]
 layout_mode = 0
@@ -283,6 +297,7 @@ offset_top = 668.0
 offset_right = 310.0
 offset_bottom = 714.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_tnpda")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pnd5t")
 
 [node name="win_exp" type="Label" parent="ExplorerButton" unique_id=239488843]
 layout_mode = 0
@@ -302,8 +317,7 @@ text = "Explorer"
 [connection signal="pressed" from="Level6" to="." method="_on_level_6_pressed"]
 [connection signal="pressed" from="Level7" to="." method="_on_level_7_pressed"]
 [connection signal="pressed" from="Level8" to="." method="_on_level_8_pressed"]
-[connection signal="pressed" from="Level8" to="." method="_on_level_7_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="ExplorerButton" to="." method="_on_explorer_pressed"]

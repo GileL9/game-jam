@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dxo4coln7lo5h" path="res://Goal/goal.gd" id="1_hspb0"]
 [ext_resource type="Texture2D" uid="uid://dqskmtemis4eq" path="res://assets/pciconhappy.png" id="2_3iwka"]
+[ext_resource type="AudioStream" uid="uid://buc47pt37cdcy" path="res://assets/tada.wav" id="3_y78nh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35lpn"]
 size = Vector2(49, 48)
@@ -59,5 +60,8 @@ shape = SubResource("RectangleShape2D_35lpn")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2147413630]
 libraries/ = SubResource("AnimationLibrary_po8gq")
 autoplay = &"new_animation"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1646095603]
+stream = ExtResource("3_y78nh")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

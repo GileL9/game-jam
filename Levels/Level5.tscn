@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://tfyuxoo5vovh" path="res://Levels/Level5Scripts/box_spawner.gd" id="3_31wo2"]
 [ext_resource type="PackedScene" uid="uid://yhic72ptt3vk" path="res://Levels/Level5Scripts/box.tscn" id="3_uwj6k"]
 [ext_resource type="Texture2D" uid="uid://chemk4gdp5pxl" path="res://assets/box_zipfile_spawner.png" id="6_31wo2"]
+[ext_resource type="AudioStream" uid="uid://4oac65n66vvh" path="res://assets/comedy_pop_finger_in_mouth_001.wav" id="6_nijbd"]
 [ext_resource type="Texture2D" uid="uid://dns0nkna4nlm1" path="res://assets/dugme.png" id="6_w1sat"]
 [ext_resource type="PackedScene" uid="uid://p8xf4gksfhw1" path="res://Player/Player.tscn" id="7_f6i8f"]
 [ext_resource type="PackedScene" uid="uid://by8sclj042wa3" path="res://Goal/goal.tscn" id="9_nijbd"]
@@ -177,6 +178,9 @@ texture = ExtResource("6_w1sat")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoxSpawner/dugme/Area2D" unique_id=869108817]
 shape = SubResource("CircleShape2D_ioxke")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BoxSpawner" unique_id=2014561786]
+stream = ExtResource("6_nijbd")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=561493061]
 position = Vector2(65, 74)

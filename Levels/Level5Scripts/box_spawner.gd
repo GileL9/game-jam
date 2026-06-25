@@ -5,6 +5,7 @@ extends Node2D
 var spawned_boxes = []
 var markersF = []
 var locations = [Vector2(447,139),Vector2(224,265),Vector2(446,329),Vector2(222,426)]
+@onready var asd = $AudioStreamPlayer2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	markersF.append($"../Marker2D")
@@ -23,12 +24,14 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		spawn_box()
+		asd.play()
 		change_loc_button()
 func spawn_box():
 	var b = box_scene.instantiate()
 	b.position =markersF.pick_random().position
 	add_child.call_deferred(b)
 	spawned_boxes.append(b)
+	
 	if spawned_boxes.size() > 9:
 		#queue free 
 		spawned_boxes[0].queue_free.call_deferred()
